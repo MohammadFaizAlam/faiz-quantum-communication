@@ -14,6 +14,7 @@ import { PhotonAnimator } from './components/PhotonAnimator'
 import { XorAnimation } from './components/XorAnimation'
 import { ProtocolGuidePage } from './components/ProtocolExplainer'
 import { TelemetryTicker } from './components/TelemetryTicker'
+import { QuantumLabPage } from './components/QuantumLab/QuantumLabPage'
 
 type LoadState =
   | { phase: 'idle' }
@@ -74,7 +75,7 @@ function WorkbenchPage() {
             disturbance exposes anyone who listened in. Configure a run, watch the protocol
             execute, and read the honest caveats — this is a{' '}
             <strong className="text-ink-100 font-semibold">software simulation of idealized polarization
-            states</strong>, not quantum hardware.
+              states</strong>, not quantum hardware.
           </p>
         </div>
       </div>
@@ -180,6 +181,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<WorkbenchPage />} />
+        <Route path="/quantum-lab" element={<QuantumLabPage />} />
         <Route path="/protocol-guide" element={<ProtocolGuidePage />} />
       </Routes>
 
